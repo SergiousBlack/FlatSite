@@ -19,7 +19,7 @@ return [
     ], 
     'timeZone' => 'UTC',
     'name' => 'Sutki House',
-    
+    'language'=>'ru-RU',
     'components' => [
          
         

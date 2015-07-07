@@ -13,7 +13,7 @@ use backend\models\SendedSms;
  */
 class SendedsmsSearch extends SendedSms
 {
-    
+    public $SendedDateEnd;
     
     /**
      * @inheritdoc
@@ -21,8 +21,8 @@ class SendedsmsSearch extends SendedSms
     public function rules()
     {
         return [
-            [['id', 'senderID', 'IdInSMSC'], 'integer'],
-            [['Target','templateID', 'SendedDate','Status'], 'safe'],
+            [['id', 'IdInSMSC'], 'integer'],
+            [['Target','senderID','templateID', 'SendedDate','Status'], 'safe'],
         ];
     }
 
@@ -73,7 +73,7 @@ class SendedsmsSearch extends SendedSms
         $query->andFilterWhere(['like', 'Target', $this->Target])
               ->andFilterWhere(['like','SmsTemplate.name',  $this->templateID])
               ->andFilterWhere(['like', 'smsstatus.name', $this->Status])
-              ->filterWhere(['like', '']);
+              ->filterWhere(['like', 'user.username', $this->senderID]);
        
 
         return $dataProvider;

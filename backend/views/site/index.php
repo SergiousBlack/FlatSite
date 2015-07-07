@@ -1,4 +1,4 @@
 <?php
- echo @web;
+ echo Yii::$app->language;
 ?>
  

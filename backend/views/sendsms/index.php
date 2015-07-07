@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 use backend\models\SmsStatus;
 use backend\models\SendedSms;
+use kartik\widgets\DatePicker;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\SendedsmsSearch */
@@ -24,6 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+      
         'summary' => '',
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
@@ -48,10 +50,30 @@ $this->params['breadcrumbs'][] = $this->title;
 //                
 //            ],           
          
-            'SendedDate',
             [
-                'attribute'=>'senderID',
-                'value'=>'sender.username'
+                'attribute'=>'SendedDate',
+                'value' => 'SendedDate',
+                'format' => 'raw',
+                'filter' => 
+                DatePicker::widget([
+                                                        'model' => $searchModel,
+                                                        'attribute' => 'SendedDate',
+                                                        'attribute2' => 'SendedDateEnd',
+                                                        'options' => ['placeholder' => 'От'],
+                                                        'options2' => ['placeholder' => 'До'],
+                                                        'type' => DatePicker::TYPE_RANGE,
+                                                        
+                                                        'pluginOptions' => [
+                                                            'format' => 'yyyy-mm-dd',
+                                                            'separator' => ' asd- ',
+                                                            'autoclose' => true,
+                                                        ]
+                                                    ]),
+            ],
+            
+            [
+                'attribute' => 'senderID',
+                'value' => 'sender.username'
             ],
             
            

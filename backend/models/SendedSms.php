@@ -22,6 +22,8 @@ use common\models\User;
  */
 class SendedSms extends \yii\db\ActiveRecord
 {
+    
+    public $SendedDateEnd;
     /**
      * @inheritdoc
      */
