@@ -1,0 +1,50 @@
+<?php
+/* @var $this yii\web\View */
+use yii\helpers\Html;
+$this->title = 'Отзывы гостей';
+?>
+
+    <p class="reserv_title"><?= Html::encode($this->title) ?></p>
+
+<div class="quest_and_ansv_left_div">
+    <div class="quest_and_ansv_block new_bmargin">
+        <p class="quest_and_ansv_answer">
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+        </p>
+        <p class="once_question_date_and_author">
+            (12.06.2013) <span class="once_question_author">Андрей</span>
+        </p>
+    </div>
+
+    <div class="quest_and_ansv_block new_bmargin">
+        <p class="quest_and_ansv_answer">
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+        </p>
+        <p class="once_question_date_and_author">
+            (12.06.2013) <span class="once_question_author">Андрей</span>
+        </p>
+    </div>
+
+</div>
+
+<div class="quest_and_ansv_right_div">
+    <div class="quest_and_ansv_form_div new_height">
+        <p class="quest_and_ansv_title">
+            Ваш отзыв
+        </p>
+        <p class="quest_and_ansv_text">
+            Здесь Вы можете оставить отзыв о работе нашей компании.
+        </p>
+        <div class="quest_and_ansv_form">
+            <p class="form_label">Имя:</p>
+            <input type="text" name="" class="quest_and_ansv_form_input" />
+            <p class="form_label">Адрес эл. почты:</p>
+            <input type="text" name="" class="quest_and_ansv_form_input" />
+            <p class="form_label">Текст отзыва:</p>
+            <textarea name="" class="quest_and_ansv_form_big_input"></textarea>
+            <input type="submit" name="" value="Оставить отзыв" class="quest_and_ansv_form_submit_button new_margin" />
+        </div>
+    </div>
+    <br />
+</div>
+<div class="clear"></div>
