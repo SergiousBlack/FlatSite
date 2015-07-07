@@ -14,12 +14,20 @@
     },
     "minimum-stability": "stable",
     "require": {
+
         "php": ">=5.4.0",  
+
+        "php": ">=5.4.0", 
+
         "yiisoft/yii2": ">=2.0.4",
         "yiisoft/yii2-bootstrap": "*",
+
         "yiisoft/yii2-swiftmailer": "*",
         "kartik-v/yii2-widgets": "dev-master",
-        "kartik-v/yii2-field-range": "*"
+        "kartik-v/yii2-field-range": "*",
+
+        "yiisoft/yii2-swiftmailer": "*"
+
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

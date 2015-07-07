@@ -12,6 +12,7 @@ use \yii\helpers\Url;
  
 
 AppAsset::register($this);
+
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -30,12 +31,12 @@ AppAsset::register($this);
         <div class="nav_div white_bg">
             <nav class="white_bg"> 
                 <div class="main_menu_bg_div">
-                    <a href="<?=Url::to("reserver-and-paid")?>"><div class="main_menu_el main_menu_r_border m_m_el_1 <?= Yii::$app->requestedAction->id == 'index' ? 'main_menu_el_active' : ''  ?>">Бронирование и оплата</div></a>
-                    <a href="<?=Url::to("questions-and-answers")?>"><div class="main_menu_el main_menu_r_border m_m_el_2 @ViewBag.Active2">Вопросы и ответы</div></a>
-                    <a href="<?=Url::to("reviews")?>"><div class="main_menu_el main_menu_r_border m_m_el_3 @ViewBag.Active3">Отзывы гостей</div></a>
-                    <a href="<?=Url::to("cooperation")?>"><div class="main_menu_el main_menu_r_border m_m_el_4 @ViewBag.Active4">Сотрудничество</div></a>
-                    <a href="<?=Url::to("partners")?>"><div class="main_menu_el main_menu_r_border m_m_el_5 @ViewBag.Active5">Партнеры</div></a>
-                    <a href="<?=Url::to("contacts")?>"><div class="main_menu_el m_m_el_6 @ViewBag.Active6">Контакты</div></a>
+                    <a href="<?=Url::to("reserver")?>"><div class="main_menu_el main_menu_r_border m_m_el_1 <?= Yii::$app->controller->id == 'reserver' ? 'main_menu_el_active' : ''  ?>">Бронирование и оплата</div></a>
+                    <a href="<?=Url::to("questionsandanswers")?>"><div class="main_menu_el main_menu_r_border m_m_el_2 <?= Yii::$app->controller->id == 'questionsandanswers' ? 'main_menu_el_active' : ''  ?>">Вопросы и ответы</div></a>
+                    <a href="<?=Url::to("reviews")?>"><div class="main_menu_el main_menu_r_border m_m_el_3 <?= Yii::$app->controller->id == 'reviews' ? 'main_menu_el_active' : ''  ?>">Отзывы гостей</div></a>
+                    <a href="<?=Url::to("cooperation")?>"><div class="main_menu_el main_menu_r_border m_m_el_4 <?= Yii::$app->controller->id == 'cooperation' ? 'main_menu_el_active' : ''  ?>">Сотрудничество</div></a>
+                    <a href="<?=Url::to("partners")?>"><div class="main_menu_el main_menu_r_border m_m_el_5 <?= Yii::$app->controller->id == 'partners' ? 'main_menu_el_active' : ''  ?>">Партнеры</div></a>
+                    <a href="<?=Url::to("contacts")?>"><div class="main_menu_el m_m_el_6 <?= Yii::$app->controller->id == 'contacts' ? 'main_menu_el_active' : ''  ?>">Контакты</div></a>
                 </div>
             </nav>
         </div>
