@@ -65,14 +65,15 @@ class SendedsmsSearch extends SendedSms
         
         $query->andFilterWhere([
             'id' => $this->id,
-            'senderID' => $this->senderID, 
+            
             'IdInSMSC' => $this->IdInSMSC, 
             'SendedDate' => $this->SendedDate,
         ]);
 
         $query->andFilterWhere(['like', 'Target', $this->Target])
               ->andFilterWhere(['like','SmsTemplate.name',  $this->templateID])
-              ->andFilterWhere(['like', 'smsstatus.name', $this->Status]);
+              ->andFilterWhere(['like', 'smsstatus.name', $this->Status])
+              ->filterWhere(['like', '']);
        
 
         return $dataProvider;
