@@ -62,10 +62,10 @@ $this->params['breadcrumbs'][] = $this->title;
                                                         'options' => ['placeholder' => 'От'],
                                                         'options2' => ['placeholder' => 'До'],
                                                         'type' => DatePicker::TYPE_RANGE,
-                                                        
+                                                        'separator' => ' - ',
                                                         'pluginOptions' => [
                                                             'format' => 'yyyy-mm-dd',
-                                                            'separator' => ' asd- ',
+                                                           
                                                             'autoclose' => true,
                                                         ]
                                                     ]),
