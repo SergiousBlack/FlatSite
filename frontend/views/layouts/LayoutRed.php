@@ -34,8 +34,8 @@ AppAsset::register($this);
             <nav>
  
                 <div class="main_menu_bg_div">
-                    <a href="<?=Url::to("reserver-and-paid")?>"><div class="main_menu_el main_menu_r_border m_m_el_1 <?= Yii::$app->requestedAction->id == 'index' ? 'main_menu_el_active' : ''  ?>">Бронирование и оплата</div></a>
-                    <a href="<?=Url::to("questions-and-answers")?>"><div class="main_menu_el main_menu_r_border m_m_el_2 @ViewBag.Active2">Вопросы и ответы</div></a>
+                    <a href="<?=Url::to("reserver")?>"><div class="main_menu_el main_menu_r_border m_m_el_1 <?= Yii::$app->requestedAction->id == 'index' ? 'main_menu_el_active' : ''  ?>">Бронирование и оплата</div></a>
+                    <a href="<?=Url::to("questionsandanswers")?>"><div class="main_menu_el main_menu_r_border m_m_el_2 @ViewBag.Active2">Вопросы и ответы</div></a>
                     <a href="<?=Url::to("reviews")?>"><div class="main_menu_el main_menu_r_border m_m_el_3 @ViewBag.Active3">Отзывы гостей</div></a>
                     <a href="<?=Url::to("cooperation")?>"><div class="main_menu_el main_menu_r_border m_m_el_4 @ViewBag.Active4">Сотрудничество</div></a>
                     <a href="<?=Url::to("partners")?>"><div class="main_menu_el main_menu_r_border m_m_el_5 @ViewBag.Active5">Партнеры</div></a>
