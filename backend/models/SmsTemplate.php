@@ -46,7 +46,7 @@ class SmsTemplate extends \yii\db\ActiveRecord
             'id' => 'ID',
             'name' => 'Название шаблона',
             'text' => 'Текст отправки',
-            'idApartment' => 'Номер апартамента',
+            'idApartment' => 'ID шаблона',
         ];
     }
 

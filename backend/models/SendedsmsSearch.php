@@ -9,10 +9,12 @@ use backend\models\SendedSms;
 
 /**
  * SendedsmsSearch represents the model behind the search form about `backend\models\SendedSms`.
- *  @property string $SendedDateEnd
+ *   
  */
 class SendedsmsSearch extends SendedSms
 {
+    
+    
     public $SendedDateEnd;
     
     /**
@@ -46,12 +48,19 @@ class SendedsmsSearch extends SendedSms
     {
         $query = SendedSms::find();
 
+        
+        
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
 
         $this->load($params);
-
+         
+        
+        if(isset($params['SendedsmsSearch']['SendedDateEnd'])){
+            $this->SendedDateEnd = $params['SendedsmsSearch']['SendedDateEnd'];
+        }
+        
         if (!$this->validate()) {
             // uncomment the following line if you do not want to return any records when validation fails
             // $query->where('0=1');
@@ -65,17 +74,19 @@ class SendedsmsSearch extends SendedSms
         
         $query->andFilterWhere([
             'id' => $this->id,
-            
             'IdInSMSC' => $this->IdInSMSC, 
-            'SendedDate' => $this->SendedDate,
+           
         ]);
-
+         
         $query->andFilterWhere(['like', 'Target', $this->Target])
               ->andFilterWhere(['like','SmsTemplate.name',  $this->templateID])
               ->andFilterWhere(['like', 'smsstatus.name', $this->Status])
-              ->filterWhere(['like', 'user.username', $this->senderID]);
+              ->andfilterWhere(['like', 'user.username', $this->senderID])
+              ->andFilterWhere(['>=','SendedDate',$this->SendedDate])
+              ->andFilterWhere(['<=','SendedDate',$this->SendedDateEnd]);
        
-
+     
+        
         return $dataProvider;
     }
 }

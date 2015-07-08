@@ -49,11 +49,11 @@ $this->params['breadcrumbs'][] = $this->title;
 //                'format' => ['time','H:i:s'],
 //                
 //            ],           
-         
+
             [
                 'attribute'=>'SendedDate',
                 'value' => 'SendedDate',
-                'format' => 'raw',
+                'format' => ['time','php: H:i:s'],
                 'filter' => 
                 DatePicker::widget([
                                                         'model' => $searchModel,
@@ -64,8 +64,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                                         'type' => DatePicker::TYPE_RANGE,
                                                         'separator' => ' - ',
                                                         'pluginOptions' => [
-                                                            'format' => 'yyyy-mm-dd',
-                                                           
+                                                            'format' => 'yy-mm-dd',
                                                             'autoclose' => true,
                                                         ]
                                                     ]),

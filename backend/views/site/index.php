@@ -1,4 +1,4 @@
 <?php
- echo Yii::$app->language;
+
 ?>
- 
+<h1>Приветствую!</h1> 

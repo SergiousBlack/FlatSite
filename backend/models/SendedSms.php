@@ -14,8 +14,7 @@ use common\models\User;
  * @property integer $IdInSMSC
  * @property integer $Status
  * @property string $Target
- * @property string $SendedDate
- *
+ * @property string $SendedDate 
  * @property Smsstatus $status
  * @property Smstemplate $template
  * @property User $sender
@@ -23,7 +22,6 @@ use common\models\User;
 class SendedSms extends \yii\db\ActiveRecord
 {
     
-    public $SendedDateEnd;
     /**
      * @inheritdoc
      */
@@ -42,7 +40,7 @@ class SendedSms extends \yii\db\ActiveRecord
         return [
             [['templateID', 'IdInSMSC', 'Status'], 'integer'],
             [['Target','templateID'],'required', 'message'=>'Это поле обязательно к заполнению'],
-            [['SendedDate','senderID'], 'safe'], 
+            [['SendedDate','senderID','SendedDateEnd'], 'safe'], 
             [['Target'], 'string', 'max' => 255]
         ];
     }
