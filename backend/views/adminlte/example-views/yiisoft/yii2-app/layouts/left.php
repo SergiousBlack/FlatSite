@@ -63,6 +63,7 @@ use \yii\helpers\Url;
 
                 </ul>
             </li>
+            
             <li>
                 <a href=\"". Url::to(['/templategroups']) ."\">
                     <i class=\"fa fa-home\"></i> <span>Группы шаблонов</span> 
@@ -73,6 +74,22 @@ use \yii\helpers\Url;
                     <i class=\"fa fa-file-text-o\"></i> <span>Шаблоны</span> 
                 </a> 
             </li>
+            
+            <li class=\"treeview\">
+                <a href=\"#\">
+                    <i class=\"fa fa-home\"></i> <span>Апартаменты</span>
+                    <i class=\"fa fa-angle-left pull-right\"></i>
+                </a>
+                <ul class=\"treeview-menu\">
+                   
+                    <li><a href=\"". Url::to(['/city']) ."\"><span class=\"fa fa-circle-o\"></span> Категории</a>
+                    </li>
+                     <li><a href=\"". Url::to(['/city-category']) ."\"><span class=\"fa fa-circle-o\"></span> Пути</a>
+                    </li>
+
+                </ul>
+            </li>
+
               <li>
                 <a href=\"". Url::to(['/questions']) ."\">
                     <i class=\"fa fa-question\"></i> <span>Вопросы и ответы</span> 
