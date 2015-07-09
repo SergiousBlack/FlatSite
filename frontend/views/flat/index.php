@@ -61,7 +61,7 @@ $this->title = 'Квартира';
                         <img width="72" height="47" id="6" number="6" src="<?=Yii::getAlias('@web')?>/img/6.jpg" alt="" class="flat_nav_mini_img" />
                     </div>
                     <div class="slide-item">
-                        <img width="72" height="47" id="7" number="7" src="<?=Yii::getAlias('@web')?>/7.jpg" alt="" class="flat_nav_mini_img" />
+                        <img width="72" height="47" id="7" number="7" src="<?=Yii::getAlias('@web')?>/img/7.jpg" alt="" class="flat_nav_mini_img" />
                     </div>
                     <div class="slide-item">
                         <img width="72" height="47" id="8" number="8" src="<?=Yii::getAlias('@web')?>/img/8.jpg" alt="" class="flat_nav_mini_img" />
