@@ -52,7 +52,7 @@ $bottom_text = "Это прежде всего гарантия результа
                 <div class="div4" style="z-indez:99999!important; width: 1000px;">
                     <div style="position: relative; top: -10px; display: block;" id="gallery">
                         <div style="left: 180.5px; width: 625px; height: 345px; top: 20px; opacity: 1; z-index: 4;" class="carousel-feature carousel_big_img">
-                            <a href="/frontend/web/flat">
+                            <a href="flat">
                                 <img style="width: 625px; height: 345px;" class="carousel-image" alt="" src="images/0_77633600_1351448634_img.jpg" href="#">
                             </a>
 
@@ -115,7 +115,7 @@ $bottom_text = "Это прежде всего гарантия результа
                         </div>
 
                         <div style="left: 474px; width: 512px; height: 286px; top: 50px; opacity: 0.4; z-index: 1;" class="carousel-feature carousel_small_img">
-                            <a href="@Url.Action("Flat","Home")"><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="images/0_12312700_1418251437_img.jpg" href="#"></a>
+                            <a href=""><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="images/0_12312700_1418251437_img.jpg" href="#"></a>
                             <div style="display: none;" class="carousel-caption">
                                 <p style="padding:0; margin:0;"></p>
                                 <div class="info_price" style="z-index:999;">
