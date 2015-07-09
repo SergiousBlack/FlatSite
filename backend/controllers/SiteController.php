@@ -37,14 +37,18 @@ class SiteController extends Controller
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'logout' => ['post'],
+                    'logout' => ['get'],
                 ],
             ],
         ];
     }
 
  
-    
+    public function  actionBanned(){
+        $this->layout  = 'error';
+        return $this->render('ban');
+        
+    }
     
     public function actionError()
     {
@@ -59,25 +63,9 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
-    public function  actionTest(){
-        return $this->render('test');
-    }
+     
     
-    public function actionSignup()
-    {
-        $model = new SignupForm();
-        
-        if ($model->load(Yii::$app->request->post())) {
-            if ($user = $model->signup()) {
-                 
-                return $this->goHome();
-            }
-        }
 
-        return $this->render('signup', [
-            'model' => $model,
-        ]);
-    }
 
 
     public function actionLogin()
@@ -89,9 +77,12 @@ class SiteController extends Controller
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             
-            
+           if(Yii::$app->user->can('БАН')){
+               return $this->redirect('banned');
+           }
             
             return $this->goBack();
+            
         } else {
             return $this->render('login', [
                 'model' => $model,

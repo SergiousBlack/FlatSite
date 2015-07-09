@@ -3,7 +3,7 @@
 namespace backend\controllers;
 
 use Yii;
-use backend\models\Sendedsms;
+use backend\models\SendedSms;
 use backend\models\SendedsmsSearch;
 use backend\models\SmsTemplate;
 use yii\web\Controller;
@@ -93,7 +93,7 @@ class SendsmsController extends Controller
      */
     public function actionCreate()
     {
-        $model = new Sendedsms();
+        $model = new SendedSms();
 
         
         

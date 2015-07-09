@@ -33,17 +33,17 @@ class SmsController extends \yii\rest\Controller
             return  $sender->send_sms($to, $text);
          }
          
-         return $sender->send_sms('380933137698', 'test');
+         return "Error";
     }
     
-    public function actionStatus(){
-         $sender  = new  SmsSender();
-         $id =  \Yii::$app->request->post('id'); 
-       if(!empty($id)){
-           return $sender->get_status('112532','+380933137698');
-       }
-       
-       return "Error";
-    }
+//    public function actionStatus(){
+//         $sender  = new  SmsSender();
+//         $id =  \Yii::$app->request->post('id'); 
+//       if(!empty($id)){
+//           return $sender->get_status('112532','+380933137698');
+//       }
+//       
+//       return "Error";
+//    }
 
 }

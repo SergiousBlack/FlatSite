@@ -8,7 +8,7 @@ use backend\models\SearchSmsTemplate;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use app\models\Appartments;
+use backend\models\templategroups;
 /**
  * SmsTemplateController implements the CRUD actions for SmsTemplate model.
  */
@@ -69,7 +69,7 @@ class SmsTemplateController extends Controller
             return $this->render('create', 
             [ 
                 'model' => $model,
-                'apartments' => Appartments::find()->all(), 
+                'apartments' => templategroups::find()->all(), 
             ]);
         }
     }
@@ -89,7 +89,7 @@ class SmsTemplateController extends Controller
         } else {
             return $this->render('update', [
                 'model' => $model,
-                'apartments' => Appartments::find()->all(), 
+                'apartments' => templategroups::find()->all(), 
             ]);
         }
     }

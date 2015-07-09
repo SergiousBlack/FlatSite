@@ -6,30 +6,26 @@ use yii\helpers\Html;
 /* @var $name string */
 /* @var $message string */
 /* @var $exception Exception */
-$this->title = $name;
+$this->title = '404';
  $this->registerCssFile('@web/css/Error.css');
 ?>
 <!-- Main content -->
-<section class="content">
 
-    <div class="error-page">
-        <h2 class="headline text-info"><i class="fa fa-warning text-yellow"></i></h2>
-
-        <div class="error-content">
-            <h3><?= $name ?></h3>
-
-            <p>
-                <?= nl2br(Html::encode($message)) ?>
-            </p>
-
-            <p>
-                The above error occurred while the Web server was processing your request.
-                Please contact us if you think this is a server error. Thank you.
-                Meanwhile, you may <a href='<?= Yii::$app->homeUrl ?>'>return to dashboard</a>  
-            </p>
-
-             
-        </div>
+ <div class="login-box">
+    <div class="login-logo">
+        <a href="#"><b>Sutki</b>House</a>
     </div>
-
-</section>
+    <!-- /.login-logo -->
+    <div class="login-box-body">
+        
+        <?php if(Yii::$app->user->can('БАН')){
+            echo ' Ув. &nbsp; '.Yii::$app->user->identity->username.' вы были забанены на данном сайте. '. Html::a('Выход',Yii::getAlias('@web').'/site/logout');
+            
+        }else{
+            echo 'Данной страницы не существует.'.Html::a('Назад',Yii::getAlias('@web').'/site/');
+        }
+?>
+        
+    </div>
+    <!-- /.login-box-body -->
+</div><!-- /.login-box -->

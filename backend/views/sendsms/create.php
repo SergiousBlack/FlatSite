@@ -10,9 +10,10 @@ $this->title = 'Новое сообщение';
 $this->params['breadcrumbs'][] = ['label' => 'Sendedsms', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+
 <div class="sendedsms-create">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h3><?= Html::encode($this->title) ?></h3>
 
     <?= $this->render('_form', [
         'model' => $model,

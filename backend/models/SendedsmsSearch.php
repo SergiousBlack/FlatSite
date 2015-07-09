@@ -6,7 +6,7 @@ use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use backend\models\SendedSms;
-
+use \DateTime;
 /**
  * SendedsmsSearch represents the model behind the search form about `backend\models\SendedSms`.
  *   
@@ -56,9 +56,17 @@ class SendedsmsSearch extends SendedSms
 
         $this->load($params);
          
+       
+       
         
         if(isset($params['SendedsmsSearch']['SendedDateEnd'])){
             $this->SendedDateEnd = $params['SendedsmsSearch']['SendedDateEnd'];
+        }else{
+             $this->SendedDateEnd = date('d-m-Y');
+        }
+        
+        if(!isset($this->SendedDate)){
+             $this->SendedDate = date('d-m-Y');
         }
         
         if (!$this->validate()) {
@@ -77,13 +85,19 @@ class SendedsmsSearch extends SendedSms
             'IdInSMSC' => $this->IdInSMSC, 
            
         ]);
+      
+        
+        $dateStart = new DateTime($this->SendedDate);
+         $dateEnd = new DateTime($this->SendedDateEnd);
+         $dateEnd->modify('+1 day');
          
         $query->andFilterWhere(['like', 'Target', $this->Target])
               ->andFilterWhere(['like','SmsTemplate.name',  $this->templateID])
               ->andFilterWhere(['like', 'smsstatus.name', $this->Status])
               ->andfilterWhere(['like', 'user.username', $this->senderID])
-              ->andFilterWhere(['>=','SendedDate',$this->SendedDate])
-              ->andFilterWhere(['<=','SendedDate',$this->SendedDateEnd]);
+              ->andFilterWhere(['>=','SendedDate',$dateStart->format('Y-m-d')])
+              ->andFilterWhere(['<=','SendedDate',$dateEnd->format('Y-m-d')])
+              ->orderBy('id DESC');
        
      
         

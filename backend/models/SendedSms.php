@@ -4,6 +4,8 @@ namespace backend\models;
 
 use Yii;
 use common\models\User;
+use backend\models\SmsTemplate;
+use backend\models\SmsStatus;
 
 /**
  * This is the model class for table "sendedsms".
@@ -15,8 +17,9 @@ use common\models\User;
  * @property integer $Status
  * @property string $Target
  * @property string $SendedDate 
- * @property Smsstatus $status
- * @property Smstemplate $template
+ * 
+ * @property SmsStatus $status
+ * @property SmsTemplate $template
  * @property User $sender
  */
 class SendedSms extends \yii\db\ActiveRecord
@@ -40,7 +43,7 @@ class SendedSms extends \yii\db\ActiveRecord
         return [
             [['templateID', 'IdInSMSC', 'Status'], 'integer'],
             [['Target','templateID'],'required', 'message'=>'Это поле обязательно к заполнению'],
-            [['SendedDate','senderID','SendedDateEnd'], 'safe'], 
+            [['SendedDate','senderID'], 'safe'], 
             [['Target'], 'string', 'max' => 255]
         ];
     }
@@ -66,7 +69,7 @@ class SendedSms extends \yii\db\ActiveRecord
      */
     public function getStatus()
     {
-        return $this->hasOne(Smsstatus::className(), ['id' => 'Status']);
+        return $this->hasOne(SmsStatus::className(), ['id' => 'Status']);
     }
 
     /**
@@ -74,7 +77,7 @@ class SendedSms extends \yii\db\ActiveRecord
      */
     public function getTemplate()
     {
-        return $this->hasOne(Smstemplate::className(), ['id' => 'templateID']);
+        return $this->hasOne(SmsTemplate::className(), ['id' => 'templateID']);
     }
 
     /**

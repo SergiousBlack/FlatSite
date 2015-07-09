@@ -9,13 +9,27 @@ return [
         'Worker',
         'UserAccess',
     ],
-    2 => [
+    3 => [
+        'Worker',
+    ],
+    10 => [
+        'admin',
+        'Worker',
+        'UserCRUD',
+        'UserAccess',
+        'AdminSettings',
+        'SendSMSMessage',
+    ],
+    11 => [
         'Worker',
         'UserCRUD',
         'UserAccess',
         'SendSMSMessage',
     ],
-    3 => [
+    2 => [
         'Worker',
+        'UserCRUD',
+        'UserAccess',
+        'SendSMSMessage',
     ],
 ];

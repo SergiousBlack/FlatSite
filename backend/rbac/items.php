@@ -94,6 +94,18 @@ return [
             '/sms-template/*',
             '/sendsms/templatetext',
             '/sendsms/templist',
+            '/templategroups/index',
+            '/templategroups/view',
+            '/templategroups/create',
+            '/templategroups/update',
+            '/templategroups/delete',
+            '/templategroups/*',
+            '/user/index',
+            '/user/view',
+            '/user/create',
+            '/user/update',
+            '/user/delete',
+            '/user/*',
         ],
     ],
     '/admin/*' => [
@@ -398,6 +410,58 @@ return [
         'type' => 2,
     ],
     '/sendsms/templist' => [
+        'type' => 2,
+    ],
+    '/templategroups/index' => [
+        'type' => 2,
+    ],
+    '/templategroups/view' => [
+        'type' => 2,
+    ],
+    '/templategroups/create' => [
+        'type' => 2,
+    ],
+    '/templategroups/update' => [
+        'type' => 2,
+    ],
+    '/templategroups/delete' => [
+        'type' => 2,
+    ],
+    '/templategroups/*' => [
+        'type' => 2,
+    ],
+    '/user/index' => [
+        'type' => 2,
+    ],
+    '/user/view' => [
+        'type' => 2,
+    ],
+    '/user/create' => [
+        'type' => 2,
+    ],
+    '/user/update' => [
+        'type' => 2,
+    ],
+    '/user/delete' => [
+        'type' => 2,
+    ],
+    '/user/*' => [
+        'type' => 2,
+    ],
+    'БАН' => [
+        'type' => 1,
+        'description' => 'БАН',
+        'children' => [
+            '/site/login',
+            '/site/logout',
+            '/site/error',
+            '/site/banned',
+        ],
+    ],
+    '/site/banned' => [
+        'type' => 2,
+    ],
+    '/user/signup' => [
         'type' => 2,
     ],
 ];

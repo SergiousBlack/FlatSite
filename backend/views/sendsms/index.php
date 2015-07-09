@@ -12,10 +12,14 @@ use kartik\widgets\DatePicker;
 
 $this->title = 'Сообщения';
 $this->params['breadcrumbs'][] = $this->title;
+
+ 
 ?>
 <div class="sendedsms-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+     
+    
+    <h3><?= Html::encode($this->title) ?></h3>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
@@ -25,14 +29,21 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
-      
+         'rowOptions' => function ($model, $key, $index, $grid) {
+         
+                    $u= yii\helpers\Url::toRoute(['/sendsms/update']); 
+                       
+        
+                return ['id' => $model['id'], 
+                        'onclick' => 
+                            'location.href="'.$u.'?id="+(this.id);'
+                        ];
+        },
         'summary' => '',
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            //'id',
-           // 'senderID',
-            //'templateID',
+            
             'Target',
             [
                 'attribute'=>'templateID',
@@ -42,18 +53,12 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute'=>'Status',
                 'value'=> 'status.Name',
             ],
-            
-//            [   
-//                'attribute'=>'SendedDate',
-//                'value'
-//                'format' => ['time','H:i:s'],
-//                
-//            ],           
-
+           
             [
                 'attribute'=>'SendedDate',
                 'value' => 'SendedDate',
-                'format' => ['time','php: H:i:s'],
+                    'format' => ['time'],
+                
                 'filter' => 
                 DatePicker::widget([
                                                         'model' => $searchModel,
@@ -64,7 +69,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                                         'type' => DatePicker::TYPE_RANGE,
                                                         'separator' => ' - ',
                                                         'pluginOptions' => [
-                                                            'format' => 'yy-mm-dd',
+                                                            'format' => 'dd-mm-yyyy',
                                                             'autoclose' => true,
                                                         ]
                                                     ]),
@@ -78,7 +83,7 @@ $this->params['breadcrumbs'][] = $this->title;
            
 
             [   'class' => 'yii\grid\ActionColumn',
-                'template'=>'{view} {update}',
+                'template'=>'{view}', //{update}
                 'buttons' => [
      
                 'update' => function ($url, $model, $key) {

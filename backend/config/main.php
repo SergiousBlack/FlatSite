@@ -17,11 +17,16 @@ return [
             'layout' =>  null,
         ]
     ], 
-    'timeZone' => 'UTC',
+    'timeZone' => 'Europe/Kiev',
     'name' => 'Sutki House',
     'language'=>'ru-RU',
     'components' => [
-         
+         'formatter' => [
+            'timeZone' => 'UTC',
+            'dateFormat' => 'd-m-Y',
+            'timeFormat' =>  'php: H:i:s',
+            'datetimeFormat' => 'd.MM.Y H:mm',
+        ],
         
         'user' => [
             'identityClass' => 'common\models\User',

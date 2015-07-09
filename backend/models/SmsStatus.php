@@ -20,7 +20,7 @@ class SmsStatus extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'SmsStatus';
+        return 'smsstatus';
     }
 
     /**

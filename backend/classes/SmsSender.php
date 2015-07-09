@@ -5,7 +5,7 @@ namespace backend\classes;
 class SmsSender {
     
 private $SMSC_LOGIN = "sh";            // логин клиента
-private $SMSC_PASSWORD = "159159";   // пароль или MD5-хеш пароля в нижнем регистре
+private $SMSC_PASSWORD = "159159alex";   // пароль или MD5-хеш пароля в нижнем регистре
 private $SMSC_POST = "0";                // использовать метод POST
 private $SMSC_HTTPS = "0";              // использовать HTTPS протокол
 private $SMSC_CHARSET = "utf-8"; // кодировка сообщения: utf-8, koi8-r или windows-1251 (по умолчанию) 
@@ -60,7 +60,13 @@ public function send_sms($phone,$text)
 public function get_status($id, $phone)
 {
     $json = file_get_contents("http://smsc.ru/sys/status.php?login=".$this->SMSC_LOGIN."&psw=".$this->SMSC_PASSWORD."&id=".$id."&phone=".$phone."&fmt=3");
-    return json_decode($json,TRUE)['status'];
+    
+    
+    if(isset(json_decode($json,TRUE)['status'])){
+            return json_decode($json,TRUE)['status'];
+    }else{
+            return '11';
+    }
 }
 
 // Функция получения баланса

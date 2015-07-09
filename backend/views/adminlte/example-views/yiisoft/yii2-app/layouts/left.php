@@ -50,9 +50,8 @@ use \yii\helpers\Url;
                     <i class=\"fa fa-angle-left pull-right\"></i>
                 </a>
                 <ul class=\"treeview-menu\">
-                    <li><a href=\"". Url::to(['/site/signup']) ."\"><span class=\"fa fa-plus\"></span>Добавить пользователя</a>
-                    </li>
-                    <li><a href=\"". Url::to(['/admin']) ."\"><span class=\"fa fa-list\"></span> Список</a>
+                   
+                    <li><a href=\"". Url::to(['/admin']) ."\"><span class=\"fa fa-list\"></span> Пользователи</a>
                     </li>
                      <li><a href=\"". Url::to(['/admin/route']) ."\"><span class=\"fa fa-link\"></span> Пути</a>
                     </li>
@@ -65,7 +64,7 @@ use \yii\helpers\Url;
                 </ul>
             </li>
             <li>
-                <a href=\"". Url::to(['/appartments']) ."\">
+                <a href=\"". Url::to(['/templategroups']) ."\">
                     <i class=\"fa fa-home\"></i> <span>Группы шаблонов</span> 
                 </a> 
             </li>
@@ -73,7 +72,13 @@ use \yii\helpers\Url;
                 <a href=\"". Url::to(['/sms-template']) ."\">
                     <i class=\"fa fa-file-text-o\"></i> <span>Шаблоны</span> 
                 </a> 
-            </li>"; }?>
+            </li>
+              <li>
+                <a href=\"". Url::to(['/questions']) ."\">
+                    <i class=\"fa fa-question\"></i> <span>Вопросы и ответы</span> 
+                </a> 
+            </li>
+            "; }?>
         </ul>
 
     </section>

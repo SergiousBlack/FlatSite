@@ -25,7 +25,7 @@ use yii\bootstrap\NavBar;
                     <?= Html::a(
                                     'Выход',
                                     ['/site/logout'],
-                                    ['data-method' => 'post', 'class' => 'btn btn-default btn-flat']
+                                    ['data-method' => 'get']
                                 ) ?>
                 </li>
                 

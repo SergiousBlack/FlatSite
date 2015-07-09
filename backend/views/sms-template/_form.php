@@ -19,7 +19,7 @@ use yii\helpers\ArrayHelper;
 
     <?= $form->field($model, 'text')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'idApartment')->dropDownList(ArrayHelper::map($apartments, 'VisibleAppartmentID', 'AppartmentInfo'))->label('Название апартамента') ?>
+    <?= $form->field($model, 'idApartment')->dropDownList(ArrayHelper::map($apartments, 'AppartmentID', 'AppartmentInfo'))->label('Название апартамента') ?>
     
 
     <div class="form-group">

@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $model app\models\SmsTemplate */
 /* @var $apartments app\models\Appartments */
 
-$this->title = 'Update Sms Template: ' . ' ' . $model->name;
+$this->title = 'Обновление шаблона: ' . ' ' . $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Sms Templates', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';

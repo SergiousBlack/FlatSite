@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
-use app\models\Appartments;
+use backend\models\templategroups;
 use app\models\SmsTemplate;
 
 /* @var $this yii\web\View */
@@ -16,9 +16,9 @@ use app\models\SmsTemplate;
 
     <?php $form = ActiveForm::begin(); ?>
     <div class="form-group">
-        <label for="AppartmentID" class="control-label">ID апартамента</label>
+        <label for="AppartmentID" class="control-label">Группа</label>
     <?= Html::dropDownList('AppartmentID', null,
-      ArrayHelper::map(Appartments::find()->all(), 'AppartmentID', 'AppartmentInfo'),[
+      ArrayHelper::map(templategroups::find()->orderBy('AppartmentInfo ASC')->all(), 'AppartmentID', 'AppartmentInfo'),[
           'prompt' => '',
           'onchange' => '$.post("'.Url::to('templist').'?id='.'"+$(this).val(), function(data){'
           . '$("select#sendedsms-templateid").html(data);});',

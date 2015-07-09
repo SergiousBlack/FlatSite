@@ -27,8 +27,8 @@ class AppAsset extends AssetBundle
         'js/jquery.js',
         'js/main_js.js',
         'js/common.js',
-//        'js/slider.js',
-//        'js/js.js',
+        'js/slider.js',
+        'js/js.js',
         
         
         
