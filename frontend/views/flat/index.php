@@ -9,7 +9,7 @@ $this->title = 'Квартира';
     <a href="#" class="popup__close">&nbsp;</a>
     <div class="flat_big_img_bg_div popup">
         <div>
-            <img src="img/0.jpg" class="flat_big_img" number="0" />
+            <img src="<?=Yii::getAlias('@web')?>/img/0.jpg" class="flat_big_img" number="0" />
             <div class="flat_big_img_prev">
                 <div class="flat_big_img_prev_button">
                     ПРЕД
@@ -154,7 +154,7 @@ $this->title = 'Квартира';
         <div style="position: relative; top: -10px; display: block;" id="carousel">
             <div id="s_f_1" name="2" style="left: 180.5px; width: 625px; height: 345px; top: 20px; opacity: 1; z-index: 4;" class="carousel-feature carousel_big_img">
                 <a href="/Sutki/Home/Flat" id="flat_big_img_top_slider">
-                    <img style="width: 625px; height: 345px;" class="carousel-image" alt="" src="images/0_77633600_1351448634_img.jpg" href="#">
+                    <img style="width: 625px; height: 345px;" class="carousel-image" alt="" src="<?=Yii::getAlias('@web')?>/images/0_77633600_1351448634_img.jpg" href="#">
                 </a>
 
                 <div style="display: block; opacity: 0.99;" class="carousel-caption">
@@ -216,7 +216,7 @@ $this->title = 'Квартира';
             </div>
 
             <div id="s_f_2" name="1" style="left: 474px; width: 512px; height: 286px; top: 50px; opacity: 0.4; z-index: 1;" class="carousel-feature carousel_small_img">
-                <a href="#" class="other_slide"><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="images/0_12312700_1418251437_img.jpg" href="#"></a>
+                <a href="#" class="other_slide"><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="<?=Yii::getAlias('@web')?>/images/0_12312700_1418251437_img.jpg" href="#"></a>
                 <div style="display: none;" class="carousel-caption">
                     <p style="padding:0; margin:0;"></p>
                     <div class="info_price" style="z-index:999;">
@@ -274,7 +274,7 @@ $this->title = 'Квартира';
 
 
             <div id="s_f_3" name="1" style="left: 474px; width: 512px; height: 286px; top: 50px; opacity: 0.4; z-index: 1;" class="carousel-feature carousel_small_img">
-                <a href="#" class="other_slide"><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="/frontend/web/images/0_12312700_1418251437_img.jpg" href="#"></a>
+                <a href="#" class="other_slide"><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="<?=Yii::getAlias('@web')?>/images/0_12312700_1418251437_img.jpg" href="#"></a>
                 <div style="display: none;" class="carousel-caption">
                     <p style="padding:0; margin:0;"></p>
                     <div class="info_price" style="z-index:999;">
@@ -331,7 +331,7 @@ $this->title = 'Квартира';
             </div>
 
             <div id="s_f_4" name="0" style="left: 237px; width: 512px; height: 286px; top: 50px; opacity: 0; z-index: 1;" class="carousel-feature carousel_small_img">
-                <a href="#" class="other_slide"><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="/frontend/web/images/0_84337400_1418026627_img.jpg" href="#"></a>
+                <a href="#" class="other_slide"><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="<?=Yii::getAlias('@web')?>/images/0_84337400_1418026627_img.jpg" href="#"></a>
                 <div style="display: none;" class="carousel-caption">
                     <p style="padding:0; margin:0;"></p>
                     <div class="info_price" style="z-index:999;">
@@ -391,7 +391,7 @@ $this->title = 'Квартира';
             </div>
 
             <div id="s_f_5" name="7" style="left: 0px; width: 512px; height: 286px; top: 50px; opacity: 0.4; z-index: 1;" class="carousel-feature carousel_small_img">
-                <a href="#" class="other_slide"><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="/frontend/web/images/0_52061000_1418467060_img.jpg" href="#"></a>
+                <a href="#" class="other_slide"><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="<?=Yii::getAlias('@web')?>/images/0_52061000_1418467060_img.jpg" href="#"></a>
                 <div style="display: none;" class="carousel-caption">
                     <p style="padding:0; margin:0;"></p>
                     <div class="info_price" style="z-index:999;">
@@ -447,7 +447,7 @@ $this->title = 'Квартира';
                 </div>
             </div>
             <div id="s_f_6" name="7" style="left: 0px; width: 512px; height: 286px; top: 50px; opacity: 0.4; z-index: 1;" class="carousel-feature carousel_small_img">
-                <a href="#" class="other_slide"><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="/frontend/web/images/0_52061000_1418467060_img.jpg" href="#"></a>
+                <a href="#" class="other_slide"><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="<?=Yii::getAlias('@web')?>/images/0_52061000_1418467060_img.jpg" href="#"></a>
                 <div style="display: none;" class="carousel-caption">
                     <p style="padding:0; margin:0;"></p>
                     <div class="info_price" style="z-index:999;">
@@ -532,84 +532,84 @@ $this->title = 'Квартира';
                     <div class="flat_options_div" id="0">
                         <li><span>Телевизоры "Toshiba" 42' в комнатах<span></li>
                         <div style="display: none; position: absolute; margin-left: 95px;" id="optimg_0">
-                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="/frontend/web/img/0.jpg">
+                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="<?=Yii::getAlias('@web')?>/img/0.jpg">
                             <div style="clear: both;"></div>
                         </div>
                     </div>
                     <div class="flat_options_div" id="1">
                         <li><span>Телевизор "Toshiba" 32' на кухне<span></li>
                         <div style="display: none; position: absolute; margin-left: 95px; " id="optimg_1">
-                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="/frontend/web/img/1.jpg">
+                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="<?=Yii::getAlias('@web')?>/img/1.jpg">
                             <div style="clear: both;"></div>
                         </div>
                     </div>
                     <div class="flat_options_div" id="2">
                         <li><span>Кондиционеры "Panasonic" в комнатах<span></li>
                         <div style="display: none; position: absolute; margin-left: 95px; " id="optimg_2">
-                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="/frontend/web/img/2.jpg">
+                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="<?=Yii::getAlias('@web')?>/img/2.jpg">
                             <div style="clear: both;"></div>
                         </div>
                     </div>
                     <div class="flat_options_div" id="3">
                         <li><span>Кабельное TV<span></li>
                         <div style="display: none; position: absolute; margin-left: 95px; " id="optimg_3">
-                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="/frontend/web/img/3.jpg">
+                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="<?=Yii::getAlias('@web')?>/img/3.jpg">
                             <div style="clear: both;"></div>
                         </div>
                     </div>
                     <div class="flat_options_div" id="4">
                         <li><span>Интернет Wi-Fi<span></li>
                         <div style="display: none; position: absolute; margin-left: 95px; " id="optimg_4">
-                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="/frontend/web/img/4.jpg">
+                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="<?=Yii::getAlias('@web')?>/img/4.jpg">
                             <div style="clear: both;"></div>
                         </div>
                     </div>
                     <div class="flat_options_div" id="5">
                         <li><span>Домофон<span></li>
                         <div style="display: none; position: absolute; margin-left: 95px; " id="optimg_5">
-                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="/frontend/web/img/5.jpg">
+                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="<?=Yii::getAlias('@web')?>/img/5.jpg">
                             <div style="clear: both;"></div>
                         </div>
                     </div>
                     <div class="flat_options_div" id="6">
                         <li><span>Стеклокерамическая варочная панель<span></li>
                         <div style="display: none; position: absolute; margin-left: 95px; " id="optimg_6">
-                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="/frontend/web/img/6.jpg">
+                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="<?=Yii::getAlias('@web')?>/img/6.jpg">
                             <div style="clear: both;"></div>
                         </div>
                     </div>
                     <div class="flat_options_div" id="7">
                         <li><span>Духовой шкаф<span></li>
                         <div style="display: none; position: absolute; margin-left: 95px; " id="optimg_7">
-                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="/frontend/web/img/7.jpg">
+                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="<?=Yii::getAlias('@web')?>/img/7.jpg">
                             <div style="clear: both;"></div>
                         </div>
                     </div>
                     <div class="flat_options_div" id="8">
                         <li><span>Кухонная вытяжка<span></li>
                         <div style="display: none; position: absolute; margin-left: 95px; " id="optimg_8">
-                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="/frontend/web/img/8.jpg">
+                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="<?=Yii::getAlias('@web')?>/img/8.jpg">
                             <div style="clear: both;"></div>
                         </div>
                     </div>
                     <div class="flat_options_div" id="9">
                         <li><span>Холодильник<span></li>
                         <div style="display: none; position: absolute; margin-left: 95px; " id="optimg_9">
-                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="/frontend/web/img/9.jpg">
+                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="<?=Yii::getAlias('@web')?>/img/9.jpg">
                             <div style="clear: both;"></div>
                         </div>
                     </div>
                     <div class="flat_options_div" id="10">
                         <li><span>Посудомоечная машина<span></li>
                         <div style="display: none; position: absolute; margin-left: 95px; " id="optimg_10">
-                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="/frontend/web/img/10.jpg">
+                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="<?=Yii::getAlias('@web')?>/img/10.jpg">
                             <div style="clear: both;"></div>
                         </div>
                     </div>
                     <div class="flat_options_div" id="11">
                         <li><span>Микроволновая печь<span></li>
                         <div style="display: none; position: absolute; margin-left: 95px; " id="optimg_11">
-                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="/frontend/web/img/11.jpg">
+                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="<?=Yii::getAlias('@web')?>/img/11.jpg">
                             <div style="clear: both;"></div>
                         </div>
                     </div>
@@ -620,84 +620,84 @@ $this->title = 'Квартира';
                     <div class="flat_options_div" id="12">
                         <li><span>Телевизоры "Toshiba" 42' в комнатах<span></li>
                         <div style="display: none; position: absolute; margin-left: 95px; " id="optimg_12">
-                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="/frontend/web/img/12.jpg">
+                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="<?=Yii::getAlias('@web')?>/img/12.jpg">
                             <div style="clear: both;"></div>
                         </div>
                     </div>
                     <div class="flat_options_div" id="13">
                         <li><span>Телевизор "Toshiba" 32' на кухне<span></li>
                         <div style="display: none; position: absolute; margin-left: 95px; " id="optimg_13">
-                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="/frontend/web/img/13.jpg">
+                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="<?=Yii::getAlias('@web')?>/img/13.jpg">
                             <div style="clear: both;"></div>
                         </div>
                     </div>
                     <div class="flat_options_div" id="14">
                         <li><span>Кондиционеры "Panasonic" в комнатах<span></li>
                         <div style="display: none; position: absolute; margin-left: 95px; " id="optimg_14">
-                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="/frontend/web/img/14.jpg">
+                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="<?=Yii::getAlias('@web')?>/img/14.jpg">
                             <div style="clear: both;"></div>
                         </div>
                     </div>
                     <div class="flat_options_div" id="15">
                         <li><span>Кабельное TV<span></li>
                         <div style="display: none; position: absolute; margin-left: 95px; " id="optimg_15">
-                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="/frontend/web/img/15.jpg">
+                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="<?=Yii::getAlias('@web')?>/img/15.jpg">
                             <div style="clear: both;"></div>
                         </div>
                     </div>
                     <div class="flat_options_div" id="16">
                         <li><span>Интернет Wi-Fi<span></li>
                         <div style="display: none; position: absolute; margin-left: 95px; " id="optimg_16">
-                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="/frontend/web/img/16.jpg">
+                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="<?=Yii::getAlias('@web')?>/img/16.jpg">
                             <div style="clear: both;"></div>
                         </div>
                     </div>
                     <div class="flat_options_div" id="17">
                         <li><span>Домофон<span></li>
                         <div style="display: none; position: absolute; margin-left: 95px; " id="optimg_17">
-                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="/frontend/web/img/17.jpg">
+                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="<?=Yii::getAlias('@web')?>/img/17.jpg">
                             <div style="clear: both;"></div>
                         </div>
                     </div>
                     <div class="flat_options_div" id="18">
                         <li><span>Стеклокерамическая варочная панель<span></li>
                         <div style="display: none; position: absolute; margin-left: 95px; " id="optimg_18">
-                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="/frontend/web/img/18.jpg">
+                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="<?=Yii::getAlias('@web')?>/img/18.jpg">
                             <div style="clear: both;"></div>
                         </div>
                     </div>
                     <div class="flat_options_div" id="19">
                         <li><span>Духовой шкаф<span></li>
                         <div style="display: none; position: absolute; margin-left: 95px; " id="optimg_19">
-                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="/frontend/web/img/19.jpg">
+                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="<?=Yii::getAlias('@web')?>/img/19.jpg">
                             <div style="clear: both;"></div>
                         </div>
                     </div>
                     <div class="flat_options_div" id="20">
                         <li><span>Кухонная вытяжка<span></li>
                         <div style="display: none; position: absolute; margin-left: 95px; " id="optimg_20">
-                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="/frontend/web/img/20.jpg">
+                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="<?=Yii::getAlias('@web')?>/img/20.jpg">
                             <div style="clear: both;"></div>
                         </div>
                     </div>
                     <div class="flat_options_div" id="21">
                         <li><span>Холодильник<span></li>
                         <div style="display: none; position: absolute; margin-left: 95px; " id="optimg_21">
-                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="/frontend/web/img/21.jpg">
+                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="<?=Yii::getAlias('@web')?>/img/21.jpg">
                             <div style="clear: both;"></div>
                         </div>
                     </div>
                     <div class="flat_options_div" id="22">
                         <li><span>Посудомоечная машина<span></li>
                         <div style="display: none; position: absolute; margin-left: 95px; " id="optimg_22">
-                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="/frontend/web/img/22.jpg">
+                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="<?=Yii::getAlias('@web')?>/img/22.jpg">
                             <div style="clear: both;"></div>
                         </div>
                     </div>
                     <div class="flat_options_div" id="23">
                         <li><span>Микроволновая печь<span></li>
                         <div style="display: none; position: absolute; margin-left: 95px; " id="optimg_23">
-                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="/frontend/web/img/23.jpg">
+                            <img style="position: absolute; width: 176px; height: 99px;" class="img-option" src="<?=Yii::getAlias('@web')?>/img/23.jpg">
                             <div style="clear: both;"></div>
                         </div>
                     </div>
@@ -767,7 +767,7 @@ $this->title = 'Квартира';
     <div class="similars_flats">
         <p class="similars_flats_top_p">Красногорск</p>
         <p>Двухкомнатная квартира</p>
-        <img src="/frontend/web/images/0_12312700_1418251437_img.jpg" />
+        <img src="<?=Yii::getAlias('@web')?>/images/0_12312700_1418251437_img.jpg" />
         <div style="margin-bottom: 11px;">
             <div class="id_in_similar">
                 ID: 01
@@ -788,7 +788,7 @@ $this->title = 'Квартира';
     <div class="similars_flats similars_flats_margin">
         <p class="similars_flats_top_p">Красногорск</p>
         <p>Двухкомнатная квартира</p>
-        <img src="/frontend/web/images/0_12312700_1418251437_img.jpg" />
+        <img src="<?=Yii::getAlias('@web')?>/images/0_12312700_1418251437_img.jpg" />
         <div style="margin-bottom: 11px;">
             <div class="id_in_similar">
                 ID: 01
@@ -809,7 +809,7 @@ $this->title = 'Квартира';
     <div class="similars_flats similars_flats_margin">
         <p class="similars_flats_top_p">Красногорск</p>
         <p>Двухкомнатная квартира</p>
-        <img src="/frontend/web/images/0_12312700_1418251437_img.jpg" />
+        <img src="<?=Yii::getAlias('@web')?>/images/0_12312700_1418251437_img.jpg" />
         <div style="margin-bottom: 11px;">
             <div class="id_in_similar">
                 ID: 01
@@ -830,7 +830,7 @@ $this->title = 'Квартира';
     <div class="similars_flats similars_flats_margin">
         <p class="similars_flats_top_p">Красногорск</p>
         <p>Двухкомнатная квартира</p>
-        <img src="/frontend/web/images/0_12312700_1418251437_img.jpg" />
+        <img src="<?=Yii::getAlias('@web')?>/images/0_12312700_1418251437_img.jpg" />
         <div style="margin-bottom: 11px;">
             <div class="id_in_similar">
                 ID: 01
