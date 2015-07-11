@@ -1,7 +1,10 @@
 <?php
 /* @var $this yii\web\View */
+/* @var $asd string */
 $this->title = 'SutkiHouse';
 use yii\helpers\Url;
+use yii\widgets\Pjax;
+use yii\helpers\Html;
 $index_text = [
             'a' => 'Основным видом деятельности компании является предоставление в краткосрочную аренду жилых помещений, находящихся в нашем непосредственном управлении. Мы гарантируем полное соответствие размещенных на сайте квартир их описанию и представленным фотографиям.Это прежде всего гарантия результата. Вы получаете именно ту кваритру, которую выбрали по фотографиям. У нас нет “темных лошадок”, специалисты нашей компании лично осматривают объект и лишь затем размещают его на сайте.',
             'b' => 'Это прежде всего гарантия результата. Вы получаете именно ту кваритру, которую выбрали по фотографиям. У нас нет “темных лошадок”, специалисты нашей компании лично осматривают объект и лишь затем размещают его на сайте. ',
@@ -10,37 +13,44 @@ $index_text = [
             'e' => 'Это прежде всего гарантия результата. Вы получаете именно ту кваритру, которую выбрали по фотографиям. У нас нет “темных лошадок”, специалисты нашей компании лично осматривают объект и лишь затем размещают его на сайте. ',
 ];
 $bottom_text = "Это прежде всего гарантия результата. Вы получаете именно ту кваритру, которую выбрали по фотографиям. У нас нет “темных лошадок”, специалисты нашей компании лично осматривают объект и лишь затем размещают его на сайте.";
+
+$request = Yii::$app->request;
+$get = $request->get('cityid'); 
 ?>
 
+    
    
           <div class="header_div">
             <header>
                 <div class="header_logo">
                     <div class="header_logo_bl hlb_left">
-                        <a href="<?= Url::to('site')?>">
-                            <img src="<?= '//img.sh.ru/logo_red.png' ?>" />
+                        <a href="<?=Url::to("site")?>">
+                            <img src="//img.sh.ru/logo_red.png" />
                         </a>
                     </div>
                     <div class="header_logo_bl hlb_center">
+                        
                         <div style="border: 0px solid #fff; height: 20px;">
-                            <a href="" style="margin-right: 0px;">
-                                Красногорск
-                            </a>
-                            <a href="">
-                                Москва
-                            </a>
+                            
+                            
+                                  <?php foreach($city as $cit){ $cit['id'] == $get ? $href_class='index_city_href' : $href_class=''?>                                   
+                            
+                                        <?=Html::a($cit['Name'], ['site/index','cityid' => $cit['id']], ['class' => $href_class], ['data-pjax'=>0])?>
+                                        
+                                <?php        
+                                    }
+
+                                ?>
+                            
                         </div>
-                        <div style="border: 0px solid #fff; height: 20px; margin-top: 3px; display: none;">
-                            <a href="">
-                                одна спальня
-                            </a>
-                            <a href="">
-                                две спальни
-                            </a>
-                            <a href="">
-                                три спальни
-                            </a>
+                        <div id="cityCategory" style="border: 0px solid #fff; height: 20px; margin-top: 12px; display: block;">
+                            <?php if(isset($cat)) {foreach($cat as $c){ ?> 
+                                
+                                <?=Html::a($c['Name'], ['site/index','cityid' => $c['id']], ['class' => ''], ['data-pjax'=>0])?>
+                           
+                            <?php }} ?>
                         </div>
+                        
                     </div>
                     <div class="header_logo_bl hlb">
                         <img src="//img.sh.ru/time_red.jpg" style="float: left; margin-right: 10px; " />
@@ -48,12 +58,13 @@ $bottom_text = "Это прежде всего гарантия результа
                         <a href="#" class="header_email">info@sutkihouse.ru</a>
                     </div>
                 </div>
+                
                 <!-- -->
                 <div class="div4" style="z-indez:99999!important; width: 1000px;">
                     <div style="position: relative; top: -10px; display: block;" id="gallery">
                         <div style="left: 180.5px; width: 625px; height: 345px; top: 20px; opacity: 1; z-index: 4;" class="carousel-feature carousel_big_img">
-                            <a href="flat">
-                                <img style="width: 625px; height: 345px;" class="carousel-image" alt="" src="images/0_77633600_1351448634_img.jpg" href="#">
+                            <a href="<?=Url::to("flat")?>">
+                                <img style="width: 625px; height: 345px;" class="carousel-image" alt="" src="//img.sh.ru/0_77633600_1351448634_img.jpg" href="#">
                             </a>
 
                             <div style="display: block; opacity: 0.99;" class="carousel-caption">
@@ -115,7 +126,7 @@ $bottom_text = "Это прежде всего гарантия результа
                         </div>
 
                         <div style="left: 474px; width: 512px; height: 286px; top: 50px; opacity: 0.4; z-index: 1;" class="carousel-feature carousel_small_img">
-                            <a href=""><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="images/0_12312700_1418251437_img.jpg" href="#"></a>
+                            <a href="flat"><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="//img.sh.ru/0_12312700_1418251437_img.jpg" href="#"></a>
                             <div style="display: none;" class="carousel-caption">
                                 <p style="padding:0; margin:0;"></p>
                                 <div class="info_price" style="z-index:999;">
@@ -173,7 +184,7 @@ $bottom_text = "Это прежде всего гарантия результа
 
 
                         <div style="left: 474px; width: 512px; height: 286px; top: 50px; opacity: 0.4; z-index: 1;" class="carousel-feature carousel_small_img">
-                            <a href="@Url.Action("Flat","Home")"><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="images/0_12312700_1418251437_img.jpg" href="#"></a>
+                            <a href="flat"><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="//img.sh.ru/0_12312700_1418251437_img.jpg" href="#"></a>
                             <div style="display: none;" class="carousel-caption">
                                 <p style="padding:0; margin:0;"></p>
                                 <div class="info_price" style="z-index:999;">
@@ -230,7 +241,7 @@ $bottom_text = "Это прежде всего гарантия результа
                         </div>
 
                         <div style="left: 237px; width: 512px; height: 286px; top: 50px; opacity: 0; z-index: 1;" class="carousel-feature carousel_small_img">
-                            <a href="@Url.Action("Flat","Home")"><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="images/0_84337400_1418026627_img.jpg" href="#"></a>
+                            <a href="flat"><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="//img.sh.ru/0_84337400_1418026627_img.jpg" href="#"></a>
                             <div style="display: none;" class="carousel-caption">
                                 <p style="padding:0; margin:0;"></p>
                                 <div class="info_price" style="z-index:999;">
@@ -290,7 +301,7 @@ $bottom_text = "Это прежде всего гарантия результа
                         </div>
 
                         <div style="left: 0px; width: 512px; height: 286px; top: 50px; opacity: 0.4; z-index: 1;" class="carousel-feature carousel_small_img">
-                            <a href="@Url.Action("Flat","Home")"><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="images/0_52061000_1418467060_img.jpg" href="#"></a>
+                            <a href="flat"><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="//img.sh.ru/0_52061000_1418467060_img.jpg" href="#"></a>
                             <div style="display: none;" class="carousel-caption">
                                 <p style="padding:0; margin:0;"></p>
                                 <div class="info_price" style="z-index:999;">
@@ -346,7 +357,7 @@ $bottom_text = "Это прежде всего гарантия результа
                             </div>
                         </div>
                         <div style="left: 0px; width: 512px; height: 286px; top: 50px; opacity: 0.4; z-index: 1;" class="carousel-feature carousel_small_img">
-                            <a href="@Url.Action("Flat","Home")"><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="images/0_52061000_1418467060_img.jpg" href="#"></a>
+                            <a href="flat"><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="//img.sh.ru/0_52061000_1418467060_img.jpg" href="#"></a>
                             <div style="display: none;" class="carousel-caption">
                                 <p style="padding:0; margin:0;"></p>
                                 <div class="info_price" style="z-index:999;">
@@ -444,7 +455,7 @@ $bottom_text = "Это прежде всего гарантия результа
                     echo '
                     <tr>
                     <td valign="top">
-                        <img src="images/galka.jpg" style="margin-top: 10px; margin-right: 20px;" height="39" width="37">
+                        <img src="//img.sh.ru/galka.jpg" style="margin-top: 10px; margin-right: 20px;" height="39" width="37">
                     </td>
                     <td valign="top" class="main_page_info_text">
                        '.$it.'
@@ -467,7 +478,7 @@ $bottom_text = "Это прежде всего гарантия результа
 
         <p>
             <a href="#">
-                <img src="images/ps.jpg" height="97" width="259">
+                <img src="//img.sh.ru/ps.jpg" height="97" width="259">
             </a>
         </p>
  
