@@ -46,12 +46,12 @@ class Citycategory extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'Name' => 'Name',
-            'active' => 'Active',
+            'Name' => 'Название',
+            'active' => 'Активность',
             'MetaTitle' => 'Meta Title',
             'MetaKeywords' => 'Meta Keywords',
             'MetaDescription' => 'Meta Description',
-            'ParentID' => 'Parent ID',
+            'ParentID' => 'Город',
         ];
     }
 

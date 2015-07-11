@@ -18,7 +18,7 @@ $bottom_text = "Это прежде всего гарантия результа
                 <div class="header_logo">
                     <div class="header_logo_bl hlb_left">
                         <a href="<?= Url::to('site')?>">
-                            <img src="<?= \Yii::getAlias('@web').'/images/logo_red.png' ?>" />
+                            <img src="<?= '//img.sh.ru/logo_red.png' ?>" />
                         </a>
                     </div>
                     <div class="header_logo_bl hlb_center">
@@ -43,7 +43,7 @@ $bottom_text = "Это прежде всего гарантия результа
                         </div>
                     </div>
                     <div class="header_logo_bl hlb">
-                        <img src="images/time_red.jpg" style="float: left; margin-right: 10px; " />
+                        <img src="//img.sh.ru/time_red.jpg" style="float: left; margin-right: 10px; " />
                         <p class="header_tel">(495) 565 36 66</p>
                         <a href="#" class="header_email">info@sutkihouse.ru</a>
                     </div>

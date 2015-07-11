@@ -5,8 +5,9 @@ use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Citycategory */
+/* @var $city common\models\City */
 
-$this->title = 'Create Citycategory';
+$this->title = 'Создать подкатегорию';
 $this->params['breadcrumbs'][] = ['label' => 'Citycategories', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -16,6 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= $this->render('_form', [
         'model' => $model,
+        'city' => $city,
     ]) ?>
-
+ 
 </div>

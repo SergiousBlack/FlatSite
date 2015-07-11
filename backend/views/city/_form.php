@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use dosamigos\ckeditor\CKEditor;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\City */
@@ -14,9 +15,14 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'Name')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'active')->textInput() ?>
+    <?= $form->field($model, 'active')->checkbox() ?>
 
-    <?= $form->field($model, 'TextInfo')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'TextInfo')->widget(CKEditor::className(),
+            [
+                'options' => ['rows' => 6],
+                'preset' => 'standart',
+                 
+            ]) ?>
 
     <?= $form->field($model, 'MetaTitle')->textarea(['rows' => 6]) ?>
 
@@ -25,7 +31,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'MetaDescription')->textarea(['rows' => 6]) ?>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? 'Создать' : 'Обновить', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

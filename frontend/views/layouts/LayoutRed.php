@@ -67,7 +67,7 @@ AppAsset::register($this);
                                         <input type="text" class="inp_1000" name="flat_id" value="Поиск по id" onfocus="this.value='';">
                                     </td>
                                     <td style="padding-left: 10px;">
-                                        <img id="submit_search" src="images/lupa-24x24.png" alt="Найти">
+                                        
                                 </tr>
                             </table>
                         </form>

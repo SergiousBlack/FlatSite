@@ -5,6 +5,7 @@ namespace backend\controllers;
 use Yii;
 use common\models\Citycategory;
 use common\models\CitycategorySearch;
+use common\models\City;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -67,6 +68,7 @@ class CityCategoryController extends Controller
         } else {
             return $this->render('create', [
                 'model' => $model,
+                'city' => City::find()->all(),
             ]);
         }
     }

@@ -46,9 +46,9 @@ class City extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'Name' => 'Name',
-            'active' => 'Active',
-            'TextInfo' => 'Text Info',
+            'Name' => 'Название',
+            'active' => 'Активность',
+            'TextInfo' => 'Описание',
             'MetaTitle' => 'Meta Title',
             'MetaKeywords' => 'Meta Keywords',
             'MetaDescription' => 'Meta Description',

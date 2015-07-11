@@ -7,7 +7,7 @@ use common\models\SignupForm;
 use yii\web\Controller;
 use common\models\LoginForm;
 use yii\filters\VerbFilter;
-
+use iutbay\yii2kcfinder\KCFinderInputWidget;
 /**
  * Site controller
  */

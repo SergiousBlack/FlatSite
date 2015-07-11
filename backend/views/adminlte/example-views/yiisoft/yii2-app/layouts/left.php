@@ -84,7 +84,7 @@ use \yii\helpers\Url;
                    
                     <li><a href=\"". Url::to(['/city']) ."\"><span class=\"fa fa-circle-o\"></span> Категории</a>
                     </li>
-                     <li><a href=\"". Url::to(['/city-category']) ."\"><span class=\"fa fa-circle-o\"></span> Пути</a>
+                     <li><a href=\"". Url::to(['/city-category']) ."\"><span class=\"fa fa-circle-o\"></span> Подкатегории</a>
                     </li>
 
                 </ul>

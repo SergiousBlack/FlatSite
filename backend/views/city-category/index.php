@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\CitycategorySearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Citycategories';
+$this->title = 'Подкатегории городов';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="citycategory-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Citycategory', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Создать подкатегорию', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -25,11 +25,17 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+           // 'id',
             'Name',
-            'active',
-            'MetaTitle:ntext',
-            'MetaKeywords:ntext',
+             [
+                'attribute' => 'active',
+                'format' => 'raw',
+                'value' => function ($model, $index, $widget) {
+                    return Html::checkbox('active[]', $model->active, ['value' => $index, 'disabled' => true]);
+                },
+            ],
+            //'MetaTitle:ntext',
+            //'MetaKeywords:ntext',
             // 'MetaDescription:ntext',
             // 'ParentID',
 

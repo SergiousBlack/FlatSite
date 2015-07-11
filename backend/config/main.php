@@ -16,10 +16,14 @@ return [
             'class' => 'mdm\admin\Module',
             'layout' =>  null,
         ]
-    ], 
+    ],
+    
     'timeZone' => 'Europe/Kiev',
     'name' => 'Sutki House',
     'language'=>'ru-RU',
+    
+    
+    
     'components' => [
          'formatter' => [
             'timeZone' => 'UTC',
@@ -60,6 +64,13 @@ return [
          
         
         'urlManager' =>[
+            'enablePrettyUrl' => true,
+            'showScriptName' => FALSE,
+        ],
+        
+        'FrontendImages' =>[
+            'class' => 'yii\web\urlManager',
+            'baseUrl' => '../../frontend/web/images',
             'enablePrettyUrl' => true,
             'showScriptName' => FALSE,
         ]

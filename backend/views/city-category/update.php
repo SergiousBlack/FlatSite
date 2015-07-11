@@ -5,10 +5,10 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\Citycategory */
 
-$this->title = 'Update Citycategory: ' . ' ' . $model->Name;
+$this->title = 'Подкатегория: ' . ' ' . $model->Name;
 $this->params['breadcrumbs'][] = ['label' => 'Citycategories', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->Name, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = 'Обновление';
 ?>
 <div class="citycategory-update">
 

@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\CitySearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Cities';
+$this->title = 'Города';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="city-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create City', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Добавить город', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -25,11 +25,17 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            //'id',
             'Name',
-            'active',
-            'TextInfo:ntext',
-            'MetaTitle:ntext',
+            [
+                'attribute' => 'active',
+                'format' => 'raw',
+                'value' => function ($model, $index, $widget) {
+                    return Html::checkbox('active[]', $model->active, ['value' => $index, 'disabled' => true]);
+                },
+            ],
+            //'TextInfo:ntext',
+            //'MetaTitle:ntext',
             // 'MetaKeywords:ntext',
             // 'MetaDescription:ntext',
 
