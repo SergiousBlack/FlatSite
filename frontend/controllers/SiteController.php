@@ -13,6 +13,9 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 
+use common\models\City;
+use common\models\Citycategory;
+
 /**
  * Site controller
  */
@@ -69,11 +72,22 @@ class SiteController extends Controller
 
     public function actionIndex()
     { 
-        return $this->render('index',
+        $request = Yii::$app->request;
+        $get = $request->get('cityid'); 
+        
+        if(isset($get)){
+            return $this->render('index',
                 [
-                    
-                    
+                    'city' => City::find()->where(['active' => 1])->all(),
+                    'cat' => Citycategory::find()->where(['parentID' => $get, 'active' => 1])->all()
                 ]);
+        }else{
+            return $this->render('index',
+                [
+                    'city' => City::find()->where(['active' => 1])->all()
+                ]);
+        }
+        
     }
 
     public function actionLogin()
@@ -98,6 +112,15 @@ class SiteController extends Controller
 
         return $this->goHome();
     }
+    
+    public function actionTopmenured()
+    {
+            //$citys = City::find()->where(['active' => 1])->all();
+            
+            //return $this->render('topmenured');
+            return $this->render('index', ['asd' => 'sdsdsd']);
+    }
+
 
     public function actionContact()
     {

@@ -41,46 +41,8 @@ AppAsset::register($this);
             </nav>
         </div>
      
-        <div class="header_div white_bg">
-            <header class="white_bg white_header">
-                <div class="header_logo">
-                    <div class="header_logo_bl hlb_left">
-                        <a href="<?=Url::to("site")?>">
-                            <img src="images/logo_white.jpg" />
-                        </a>
-                    </div>
-                    <div class="header_logo_bl hlb_center">
-                        <div style="border: 0px solid #fff; height: 20px;">
-                            <a href="" class="city_active" style="margin-right: 0px;">
-                                Красногорск
-                            </a>
-                            <a href="" class="red_text">
-                                Москва
-                            </a>
-                        </div>
-                        <div style="border: 0px solid #fff; height: 20px; margin-top: 12px;">
-                            <a href="" class="red_text" style="margin-right: 0px;">
-                                одна спальня
-                            </a>
-                            <span class="red_text" style="margin-right: 6px; margin-left: 6px;">&#8226;</span>                            
-                            <a href="" class="city_active" style="margin-right: 0px;">
-                                две спальни
-                            </a>
-                            <span class="red_text" style="margin-right: 6px; margin-left: 6px;">&#8226;</span>
-                            <a href="" class="red_text">
-                                три спальни
-                            </a>
-                        </div>
-                    </div>
-                    <div class="header_logo_bl hlb">
-                        <img src="images/time_white.jpg" style="float: left; margin-right: 10px; " />
-                        <p class="header_tel black_text">(495) 565 36 66</p>
-                        <a href="#" class="header_email black_text">info@sutkihouse.ru</a>
-                    </div>
-                </div>
-            </header>
-        </div>
-        <div class="clear"></div>
+        
+                
         <div class="article_div">
             <article>
                 <?= $content ?>
@@ -113,6 +75,7 @@ AppAsset::register($this);
                     </footer>
                </div>
     <?php $this->endBody() ?>
+    
 </body>
 </html>
 <?php $this->endPage() ?>

@@ -318,7 +318,8 @@ input[type="checkbox"].input-validation-error {
 				padding: 6px;
                 height: 20px;
                 border: 0px solid #fff; 
-                background: #EDEDED;   
+                background: #EDEDED;  
+                color: #A50905 !important;
 			}
 			.hl{
 				text-align: center;
@@ -1335,4 +1336,35 @@ input[type="checkbox"].input-validation-error {
     height: 35px;
     margin-top: 329px; 
     margin-left: 473px;
+}
+.index_city_href{
+    border-radius: 6px;
+    padding: 6px;
+    height: 20px;
+    border: 0px solid #fff; 
+    background: #fff; 
+    color: #A50905 !important;
+}
+.index_city_href_wh{
+    border-radius: 6px;
+    padding: 6px;
+    height: 20px;
+    border: 0px solid #fff; 
+    background: #A50905 !important;
+    color: #fff !important;
+}
+.index_city_href_wh:hover{
+	
+                border-radius: 6px;
+				padding: 6px;
+                height: 20px;
+                border: 0px solid #fff; 
+                background: #EDEDED !important;  
+                color: #A50905 !important;
+			}
+.hlb_center a{
+    margin-right: 0px !important;
+}
+.hlb_center_wh a{
+    color: #A50905;
 }

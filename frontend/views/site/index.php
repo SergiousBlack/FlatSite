@@ -46,7 +46,7 @@ $get = $request->get('cityid');
                         <div id="cityCategory" style="border: 0px solid #fff; height: 20px; margin-top: 12px; display: block;">
                             <?php if(isset($cat)) {foreach($cat as $c){ ?> 
                                 
-                                <?=Html::a($c['Name'], ['site/index','cityid' => $c['id']], ['class' => ''], ['data-pjax'=>0])?>
+                                <?=Html::a($c['Name'], ['site/index'], ['class' => ''], ['data-pjax'=>0])?>
                            
                             <?php }} ?>
                         </div>
