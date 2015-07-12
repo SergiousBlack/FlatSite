@@ -86,6 +86,10 @@ use \yii\helpers\Url;
                     </li>
                      <li><a href=\"". Url::to(['/city-category']) ."\"><span class=\"fa fa-circle-o\"></span> Подкатегории</a>
                     </li>
+                    <li><a href=\"". Url::to(['/options']) ."\"><span class=\"fa fa-circle-o\"></span> Опции</a>
+                    </li>
+                    <li><a href=\"". Url::to(['/flat']) ."\"><span class=\"fa fa-circle-o\"></span> Апартаменты</a>
+                    </li>
 
                 </ul>
             </li>

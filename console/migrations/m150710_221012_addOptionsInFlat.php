@@ -20,12 +20,17 @@ class m150710_221012_addOptionsInFlat extends Migration
     // Use safeUp/safeDown to run migration code within a transaction
     public function safeUp()
     {
-        //$this->createTable($table, $columns)
+        $this->createTable('Options', 
+                [
+                   'id' => Schema::TYPE_PK,
+                   'name' => Schema::TYPE_STRING,
+                   'active' => Schema::TYPE_BOOLEAN,
+                ]);
     }
     
     public function safeDown()
     {
-        
+        $this->dropTable('Options');
     }
 
 }
