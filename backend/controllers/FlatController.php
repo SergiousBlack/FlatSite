@@ -8,7 +8,7 @@ use common\models\FlatSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use \yii\web\UploadedFile;
 /**
  * FlatController implements the CRUD actions for Flat model.
  */
@@ -61,14 +61,27 @@ class FlatController extends Controller
     public function actionCreate()
     {
         $model = new Flat();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        } else {
-            return $this->render('create', [
+        if($model->load(Yii::$app->request->post())){
+        
+            
+            
+            $model->MainImagefile =  UploadedFile::getInstance($model, 'MainImagefile');
+            
+            $fileName = md5($model->MainImagefile->name.time()).'.'.$model->MainImagefile->extension;
+            
+            $model->mainImage = $fileName;
+            
+             
+            if($model->save()){
+                $model->MainImagefile->saveAs(dirname(Yii::$app->basePath).'\\img\\'.$fileName);
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
+        }  
+            
+        return $this->render('create', [
                 'model' => $model,
             ]);
-        }
+        
     }
 
     /**
@@ -80,9 +93,23 @@ class FlatController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+         
+        if ($model->load(Yii::$app->request->post())) {
+            
+            $model->MainImagefile =  UploadedFile::getInstance($model, 'MainImagefile');
+            
+            if(isset($model->MainImagefile)){
+                $fileName = md5($model->MainImagefile->name.time()).'.'.$model->MainImagefile->extension;
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+                $model->mainImage = $fileName;
+            } 
+            
+            if($model->save()){
+               if(isset($model->MainImagefile)){
+                $model->MainImagefile->saveAs(dirname(Yii::$app->basePath).'\\img\\'.$fileName);
+               }
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -118,4 +145,25 @@ class FlatController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+    
+    public function actionCategory($id){
+        
+         $countTemplates = \common\models\Citycategory::find()
+                    ->where(['ParentID'=>$id])
+                    ->count();
+            
+            $templates = \common\models\Citycategory::find()
+                    ->where(['ParentID'=>$id])
+                    ->all();
+            
+            if($countTemplates>0){
+                echo '<option> </option>';
+                foreach ($templates as $template){
+                    echo "<option value='".$template->id."'>".$template->Name."</option>";
+                }
+            }else{
+                echo "<option> Подкатегории отсутствуют </option>";
+            }
+    }
+    
 }

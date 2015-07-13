@@ -2,7 +2,7 @@
 use yii\widgets\Pjax;
 use yii\helpers\Html;
 ?>
-<input type="button" class="btn btn-success" id="addNewLine" value="Добавить" > 
+<!--<input type="button" class="btn btn-success" id="addNewLine" value="Добавить" > 
 
 
 
@@ -21,8 +21,5 @@ use yii\helpers\Html;
        $($(object).parents().get(0)).remove();
         
    }
-</script>
-
-
-
+</script>-->
  

@@ -43,6 +43,8 @@ class Flat extends \yii\db\ActiveRecord
         return 'flat';
     }
 
+        public $MainImagefile;
+    
     public function scenarios()
     {
         $scenarios = parent::scenarios();
@@ -57,9 +59,11 @@ class Flat extends \yii\db\ActiveRecord
     {
         return [
             ['options', 'safe'],
+            [['MainImagefile'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, jpeg'],
+            [['MainImagefile'], 'safe'],
             [['showMainPage', 'roomNumber', 'cityCategoryID'], 'integer'],
-            [['shortInfo', 'fullInfo', 'metaTitle', 'metaKeywords', 'metaDescription'], 'string'],
-            [['name', 'mainImage', 'mainImageInfo1lvl', 'mainImageInfo2lvl', 'mainImageInfo3lvl', 'address', 'addressForMap', 'additionalInfo', 'coastInfo', 'printText'], 'string', 'max' => 255]
+            [['shortInfo','mainImage', 'fullInfo', 'metaTitle', 'metaKeywords', 'metaDescription'], 'string'],
+            [['name', 'mainImageInfo1lvl', 'mainImageInfo2lvl', 'mainImageInfo3lvl', 'address', 'addressForMap', 'additionalInfo', 'coastInfo', 'printText'], 'string', 'max' => 255]
         ];
     }
 
@@ -88,10 +92,11 @@ class Flat extends \yii\db\ActiveRecord
             'metaTitle' => 'Meta Title',
             'metaKeywords' => 'Meta Keywords',
             'metaDescription' => 'Meta Description',
+            'MainImagefile' => 'Главное изображение'
         ];
     }
     
-    
+   
     public function afterSave($insert, $changedAttributes)
     {
         if(!$insert) {
