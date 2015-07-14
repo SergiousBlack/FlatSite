@@ -15,7 +15,8 @@ return [
        'admin' => [
             'class' => 'mdm\admin\Module',
             'layout' =>  null,
-        ]
+        ],
+         
     ],
     
     'timeZone' => 'Europe/Kiev',

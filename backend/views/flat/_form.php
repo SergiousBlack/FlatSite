@@ -42,6 +42,9 @@ if(isset($CityID)){
         ->label("Подкатегория")?>
         
         <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
+         
+        <?= $form->field($model, 'FlatID')->textInput(['maxlength' => true]) ?>
+         
         <?= $form->field($model, 'showMainPage')->checkbox(['class'=>'']) ?> 
         <?= $form->field($model, 'roomNumber')->textInput() ?>
         <?= $form->field($model, 'address')->textInput(['maxlength' => true]) ?>

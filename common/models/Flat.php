@@ -26,6 +26,7 @@ use Yii;
  * @property string $metaTitle
  * @property string $metaKeywords
  * @property string $metaDescription
+ * @property string $FlatID
  *
  * @property Citycategory $cityCategory
  * @property Flatoptions[] $flatoptions
@@ -62,7 +63,7 @@ class Flat extends \yii\db\ActiveRecord
             [['MainImagefile'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, jpeg'],
             [['MainImagefile'], 'safe'],
             [['showMainPage', 'roomNumber', 'cityCategoryID'], 'integer'],
-            [['shortInfo','mainImage', 'fullInfo', 'metaTitle', 'metaKeywords', 'metaDescription'], 'string'],
+            [['shortInfo','FlatID','mainImage', 'fullInfo', 'metaTitle', 'metaKeywords', 'metaDescription'], 'string'],
             [['name', 'mainImageInfo1lvl', 'mainImageInfo2lvl', 'mainImageInfo3lvl', 'address', 'addressForMap', 'additionalInfo', 'coastInfo', 'printText'], 'string', 'max' => 255]
         ];
     }
@@ -92,7 +93,8 @@ class Flat extends \yii\db\ActiveRecord
             'metaTitle' => 'Meta Title',
             'metaKeywords' => 'Meta Keywords',
             'metaDescription' => 'Meta Description',
-            'MainImagefile' => 'Главное изображение'
+            'MainImagefile' => 'Главное изображение',
+            'FlatID' => 'ID апартамента'
         ];
     }
     

@@ -90,6 +90,8 @@ use \yii\helpers\Url;
                     </li>
                     <li><a href=\"". Url::to(['/flat']) ."\"><span class=\"fa fa-circle-o\"></span> Апартаменты</a>
                     </li>
+                    <li><a href=\"". Url::to(['/flat-image']) ."\"><span class=\"fa fa-circle-o\"></span> Изображения</a>
+                    </li>
 
                 </ul>
             </li>

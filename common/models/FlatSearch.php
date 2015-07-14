@@ -19,7 +19,7 @@ class FlatSearch extends Flat
     {
         return [
             [['id', 'showMainPage', 'roomNumber', 'cityCategoryID'], 'integer'],
-            [['name', 'mainImage', 'mainImageInfo1lvl', 'mainImageInfo2lvl', 'mainImageInfo3lvl', 'address', 'addressForMap', 'additionalInfo', 'coastInfo', 'shortInfo', 'fullInfo', 'printText', 'metaTitle', 'metaKeywords', 'metaDescription'], 'safe'],
+            [['name','FlatID', 'mainImage', 'mainImageInfo1lvl', 'mainImageInfo2lvl', 'mainImageInfo3lvl', 'address', 'addressForMap', 'additionalInfo', 'coastInfo', 'shortInfo', 'fullInfo', 'printText', 'metaTitle', 'metaKeywords', 'metaDescription'], 'safe'],
         ];
     }
 
@@ -60,6 +60,7 @@ class FlatSearch extends Flat
             'showMainPage' => $this->showMainPage,
             'roomNumber' => $this->roomNumber,
             'cityCategoryID' => $this->cityCategoryID,
+            
         ]);
 
         $query->andFilterWhere(['like', 'name', $this->name])
@@ -76,6 +77,7 @@ class FlatSearch extends Flat
             ->andFilterWhere(['like', 'printText', $this->printText])
             ->andFilterWhere(['like', 'metaTitle', $this->metaTitle])
             ->andFilterWhere(['like', 'metaKeywords', $this->metaKeywords])
+            ->andFilterWhere(['like', 'FlatID', $this->FlatID])
             ->andFilterWhere(['like', 'metaDescription', $this->metaDescription]);
 
         return $dataProvider;
