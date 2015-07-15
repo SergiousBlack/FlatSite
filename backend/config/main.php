@@ -69,9 +69,9 @@ return [
             'showScriptName' => FALSE,
         ],
         
-        'FrontendImages' =>[
+        'Images' =>[
             'class' => 'yii\web\urlManager',
-            'baseUrl' => '../../frontend/web/images',
+            'baseUrl' => '//img.sh.ru/',
             'enablePrettyUrl' => true,
             'showScriptName' => FALSE,
         ]

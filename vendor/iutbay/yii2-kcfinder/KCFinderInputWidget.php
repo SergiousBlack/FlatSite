@@ -104,7 +104,7 @@ class KCFinderInputWidget extends InputWidget
         
         if (!isset($this->kcfOptions['uploadURL']))
         {
-            $this->kcfOptions['uploadURL'] = "http://img.sh.ru";
+            $this->kcfOptions['uploadURL'] = Yii::$app->Images->baseUrl;
            
             //$this->kcfOptions['uploadDir'] = Yii::getAlias('@app/web/upload');
         } 

@@ -61,7 +61,7 @@ if(isset($CityID)){
             echo $form->field($model, 'MainImagefile')->widget(\kartik\widgets\FileInput::className(),[ 
                          'pluginOptions' => [ 
                             'initialPreview'=>[ 
-                                Html::img('//img.sh.ru/' . $model->mainImage,['width'=>'200']), 
+                                Html::img(Yii::$app->Images->baseUrl.'/'. $model->mainImage,['width'=>'200']), 
                             ], 
                             'initialCaption'=>$model->mainImage,
                             'overwriteInitial'=>true,

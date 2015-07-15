@@ -25,7 +25,7 @@ $get = $request->get('cityid');
                 <div class="header_logo">
                     <div class="header_logo_bl hlb_left">
                         <a href="<?=Url::to("site")?>">
-                            <img src="//img.sh.ru/logo_red.png" />
+                            <img src="<?=Yii::$app->Images->baseUrl?>/logo_red.png" />
                         </a>
                     </div>
                     <div class="header_logo_bl hlb_center">
@@ -53,7 +53,7 @@ $get = $request->get('cityid');
                         
                     </div>
                     <div class="header_logo_bl hlb">
-                        <img src="//img.sh.ru/time_red.jpg" style="float: left; margin-right: 10px; " />
+                        <img src="<?=Yii::$app->Images->baseUrl?>/time_red.jpg" style="float: left; margin-right: 10px; " />
                         <p class="header_tel">(495) 565 36 66</p>
                         <a href="#" class="header_email">info@sutkihouse.ru</a>
                     </div>
@@ -64,7 +64,7 @@ $get = $request->get('cityid');
                     <div style="position: relative; top: -10px; display: block;" id="gallery">
                         <div style="left: 180.5px; width: 625px; height: 345px; top: 20px; opacity: 1; z-index: 4;" class="carousel-feature carousel_big_img">
                             <a href="<?=Url::to("flat")?>">
-                                <img style="width: 625px; height: 345px;" class="carousel-image" alt="" src="//img.sh.ru/0_77633600_1351448634_img.jpg" href="#">
+                                <img style="width: 625px; height: 345px;" class="carousel-image" alt="" src="<?=Yii::$app->Images->baseUrl?>/0_77633600_1351448634_img.jpg" href="#">
                             </a>
 
                             <div style="display: block; opacity: 0.99;" class="carousel-caption">
@@ -126,7 +126,7 @@ $get = $request->get('cityid');
                         </div>
 
                         <div style="left: 474px; width: 512px; height: 286px; top: 50px; opacity: 0.4; z-index: 1;" class="carousel-feature carousel_small_img">
-                            <a href="flat"><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="//img.sh.ru/0_12312700_1418251437_img.jpg" href="#"></a>
+                            <a href="flat"><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="<?=Yii::$app->Images->baseUrl?>/0_12312700_1418251437_img.jpg" href="#"></a>
                             <div style="display: none;" class="carousel-caption">
                                 <p style="padding:0; margin:0;"></p>
                                 <div class="info_price" style="z-index:999;">
@@ -184,7 +184,7 @@ $get = $request->get('cityid');
 
 
                         <div style="left: 474px; width: 512px; height: 286px; top: 50px; opacity: 0.4; z-index: 1;" class="carousel-feature carousel_small_img">
-                            <a href="flat"><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="//img.sh.ru/0_12312700_1418251437_img.jpg" href="#"></a>
+                            <a href="flat"><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="<?=Yii::$app->Images->baseUrl?>/0_12312700_1418251437_img.jpg" href="#"></a>
                             <div style="display: none;" class="carousel-caption">
                                 <p style="padding:0; margin:0;"></p>
                                 <div class="info_price" style="z-index:999;">
@@ -241,7 +241,7 @@ $get = $request->get('cityid');
                         </div>
 
                         <div style="left: 237px; width: 512px; height: 286px; top: 50px; opacity: 0; z-index: 1;" class="carousel-feature carousel_small_img">
-                            <a href="flat"><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="//img.sh.ru/0_84337400_1418026627_img.jpg" href="#"></a>
+                            <a href="flat"><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="<?=Yii::$app->Images->baseUrl?>/0_84337400_1418026627_img.jpg" href="#"></a>
                             <div style="display: none;" class="carousel-caption">
                                 <p style="padding:0; margin:0;"></p>
                                 <div class="info_price" style="z-index:999;">
@@ -301,7 +301,7 @@ $get = $request->get('cityid');
                         </div>
 
                         <div style="left: 0px; width: 512px; height: 286px; top: 50px; opacity: 0.4; z-index: 1;" class="carousel-feature carousel_small_img">
-                            <a href="flat"><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="//img.sh.ru/0_52061000_1418467060_img.jpg" href="#"></a>
+                            <a href="flat"><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="<?=Yii::$app->Images->baseUrl?>/0_52061000_1418467060_img.jpg" href="#"></a>
                             <div style="display: none;" class="carousel-caption">
                                 <p style="padding:0; margin:0;"></p>
                                 <div class="info_price" style="z-index:999;">
@@ -357,7 +357,7 @@ $get = $request->get('cityid');
                             </div>
                         </div>
                         <div style="left: 0px; width: 512px; height: 286px; top: 50px; opacity: 0.4; z-index: 1;" class="carousel-feature carousel_small_img">
-                            <a href="flat"><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="//img.sh.ru/0_52061000_1418467060_img.jpg" href="#"></a>
+                            <a href="flat"><img style="width: 512px; height: 286px;" class="carousel-image" alt="" src="<?=Yii::$app->Images->baseUrl?>/0_52061000_1418467060_img.jpg" href="#"></a>
                             <div style="display: none;" class="carousel-caption">
                                 <p style="padding:0; margin:0;"></p>
                                 <div class="info_price" style="z-index:999;">
@@ -455,7 +455,7 @@ $get = $request->get('cityid');
                     echo '
                     <tr>
                     <td valign="top">
-                        <img src="//img.sh.ru/galka.jpg" style="margin-top: 10px; margin-right: 20px;" height="39" width="37">
+                        <img src="'.Yii::$app->Images->baseUrl.'/galka.jpg" style="margin-top: 10px; margin-right: 20px;" height="39" width="37">
                     </td>
                     <td valign="top" class="main_page_info_text">
                        '.$it.'
@@ -478,7 +478,7 @@ $get = $request->get('cityid');
 
         <p>
             <a href="#">
-                <img src="//img.sh.ru/ps.jpg" height="97" width="259">
+                <img src="<?=Yii::$app->Images->baseUrl?>/ps.jpg" height="97" width="259">
             </a>
         </p>
  

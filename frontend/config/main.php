@@ -20,7 +20,12 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => FALSE,
         ],
-       
+       'Images' =>[
+            'class' => 'yii\web\urlManager',
+            'baseUrl' => '//img.sh.ru/',
+            'enablePrettyUrl' => true,
+            'showScriptName' => FALSE,
+        ],
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],

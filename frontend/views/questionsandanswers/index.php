@@ -14,7 +14,7 @@ $this->title = 'Вопросы и ответы';
 <div class="header_logo">
                     <div class="header_logo_bl hlb_left">
                         <a href="<?=Url::to("site")?>">
-                            <img src="//img.sh.ru/logo_white.jpg" />
+                            <img src="<?=Yii::$app->Images->baseUrl?>/logo_white.jpg" />
                         </a>
                     </div>
                     <div class="header_logo_bl hlb_center hlb_center_wh">
@@ -42,7 +42,7 @@ $this->title = 'Вопросы и ответы';
                         <?php Pjax::end(); ?>
                     </div>
                     <div class="header_logo_bl hlb">
-                        <img src="//img.sh.ru/time_white.jpg" style="float: left; margin-right: 10px; " />
+                        <img src="<?=Yii::$app->Images->baseUrl?>/time_white.jpg" style="float: left; margin-right: 10px; " />
                         <p class="header_tel black_text">(495) 565 36 66</p>
                         <a href="#" class="header_email black_text">info@sutkihouse.ru</a>
                     </div>

@@ -88,7 +88,7 @@ use kartik\widgets\FileInput;
                                     
                                             'pluginOptions' => [
                                                 'initialPreview'=>[ 
-                                                    Html::img('//img.sh.ru/' . $image->img_url,['width'=>'200']), 
+                                                    Html::img(Yii::$app->Images->baseUrl.'/' . $image->img_url,['width'=>'200']), 
                                                 ],
                                                 'initialCaption'=>$image->img_url,
                                                 'overwriteInitial'=>true,

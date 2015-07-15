@@ -39,7 +39,7 @@ $citys = City::find()->where(['active' => 1])->all();
                 <div class="header_logo">
                     <div class="header_logo_bl hlb_left">
                         <a href="<?= Url::to('site')?>">
-                            <img src="<?= '//img.sh.ru/logo_red.png' ?>" />
+                            <img src=" <?=Yii::$app->Images->baseUrl?>/logo_red.png" />
                         </a>
                     </div>
                     <div class="header_logo_bl hlb_center">

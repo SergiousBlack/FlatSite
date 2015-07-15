@@ -101,6 +101,11 @@ use \yii\helpers\Url;
                     <i class=\"fa fa-question\"></i> <span>Вопросы и ответы</span> 
                 </a> 
             </li>
+             <li>
+                <a href=\"". Url::to(['/reviews']) ."\">
+                    <i class=\"fa fa-question\"></i> <span>Отзывы</span> 
+                </a> 
+            </li>
             "; }?>
         </ul>
 

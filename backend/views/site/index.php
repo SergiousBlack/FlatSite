@@ -23,3 +23,4 @@ use yii\helpers\Html;
    }
 </script>-->
  
+<?=Yii::$app->Images->baseUrl ?>
