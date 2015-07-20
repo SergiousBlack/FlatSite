@@ -1438,6 +1438,7 @@ $get = $request->get('cityid');
             top_slider_current_img++;
         }
         $("#" + "s_f_" + top_slider_current_img).css("opacity", 1);
+        alert($("#" + "s_f_" + top_slider_current_img).attr('id'));
         //$(".flat_main_div").load('http://localhost:14593/Home/flat1');
     });
 

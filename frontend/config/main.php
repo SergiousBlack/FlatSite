@@ -22,7 +22,7 @@ return [
         ],
        'Images' =>[
             'class' => 'yii\web\urlManager',
-            'baseUrl' => '//img.sh.ru/',
+            'baseUrl' => '//img.shte.esy.es/',
             'enablePrettyUrl' => true,
             'showScriptName' => FALSE,
         ],

@@ -71,7 +71,7 @@ return [
         
         'Images' =>[
             'class' => 'yii\web\urlManager',
-            'baseUrl' => '//img.sh.ru/',
+            'baseUrl' => '//img.shte.esy.es/',
             'enablePrettyUrl' => true,
             'showScriptName' => FALSE,
         ]
@@ -83,7 +83,7 @@ return [
         'allowActions' => [
            'site/login',
             'site/error',
-           'debug/*',
+            'debug/*',
             'site/logout'
         ],
     ],
